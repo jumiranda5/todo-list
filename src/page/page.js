@@ -49,7 +49,7 @@ const create_sidebar = () => {
     // Create sidebar buttons
     const homeButton = create_sidebar_button(iconHome, "Home");
     const projectsButton = create_sidebar_button(iconProject, "Projects");
-    const addButton = create_sidebar_button(iconAdd, "Add");
+    const addButton = create_sidebar_button(iconAdd, "Add Task");
 
     // Append buttons to sidebar
     sidebar.appendChild(homeButton);
