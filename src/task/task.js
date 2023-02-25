@@ -7,6 +7,22 @@ class Task {
         this.isChecked = isChecked;
     }
 
+    get title() {
+        return this._title;
+    }
+
+    get description() {
+        return this._description;
+    }
+
+    get project() {
+        return this._project;
+    }
+
+    get isChecked() {
+        return this._isChecked;
+    }
+
     set title(value) {
         this._title = value;
     }

@@ -17,6 +17,13 @@
     font-family: quattrocento, Arial, Helvetica, sans-serif;
     font-size: 16px;
     --color-main: #20212C;
+    --sidebar-width: 60px;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
 /* HEADER */
@@ -95,7 +102,122 @@
     fill: #FFFFFF;
 }
 
+/* MAIN CONTAINER */
+.main-container {
+    margin-left: var(--sidebar-width);
+    padding: 32px 16px;
+    color: var(--color-main);
+}
+
+.main-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* HOME */
+
+.tasks {
+    margin-top: 24px;
+}
+
+.task {
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border-left: 10px solid #212E9D;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.task-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 48px;
+    font-weight: bold;
+}
+
+.expand-task,
+.task-button {
+    height: 48px;
+    width: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.expand-task { padding: 10px; }
+.task-button { padding: 12px; }
+
+.task-container button > img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+.task-title-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 48px;
+    flex-grow: 1;
+}
+
+.task-title {
+    padding-top: 2px;
+}
+
+.task-description {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #7e7f8b;
+    font-size: 0.9rem;
+}
+
+.expanded {
+    height: auto;
+    padding: 0 96px 10px calc(1.3rem + 28px);
+}
+
+
+.task-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0 14px;
+    cursor: pointer;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2px solid #7e7f8b;
+    border-radius: 3px;
+    color: #212E9D;
+    
+    display: grid;
+    place-content: center;
+}
+
+.task-checkbox::before {
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1.2rem 1.2rem currentColor;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.task-checkbox:checked::before {
+    transform: scale(1);
+}
+
+.task-checkbox:checked {
+    border: none;
+}
+
 @media (min-width: 768px) {
+    :root {
+        --sidebar-width: 220px;
+    }
+    
     .header {
         height: 80px;
     }

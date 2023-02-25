@@ -2,6 +2,11 @@ const display_page = () => {
     const body = document.getElementsByTagName("BODY")[0];
     body.appendChild(create_header());
     body.appendChild(create_sidebar());
+
+    const main_container = document.createElement('div');
+    main_container.setAttribute('id', 'main-container');
+    main_container.classList.add('main-container');
+    body.appendChild(main_container);
 }
 
 const create_header = () => {
