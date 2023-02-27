@@ -6,10 +6,12 @@ const home = (tasks) => {
 
     const title = document.createElement('h1');
     title.classList.add('main-title');
+    title.classList.add('main-content');
     title.textContent = 'All Tasks';
 
     const list = document.createElement('ul');
     list.classList.add('tasks');
+    list.classList.add('main-content');
 
     for (let i = 0; i < tasks.length; i++) {
         console.log(tasks[i]);

@@ -22,9 +22,11 @@ const taskView = (task) => {
     // Title
     const title_container = document.createElement('div');
     const title = document.createElement('p');
-    const expand_button = document.createElement('button');
     title_container.classList.add('task-title-container');
     title.classList.add('task-title');
+
+    // Expand button
+    const expand_button = document.createElement('button');
     expand_button.setAttribute('type', 'button');
     expand_button.classList.add('expand-task');
     expand_button.innerHTML = expand_icon;
@@ -45,6 +47,18 @@ const taskView = (task) => {
     const description = document.createElement('p');
     description.classList.add('task-description');
 
+    // Events
+    expand_button.addEventListener('click', () => {
+        if (description.classList.contains('expanded')) {
+            expand_button.classList.remove('expand-less');
+            description.classList.remove('expanded');
+        }
+        else {
+            expand_button.classList.add('expand-less');
+            description.classList.add('expanded');
+        } 
+    });
+
     
     /*
         Elements:
@@ -63,8 +77,8 @@ const taskView = (task) => {
     task_item.appendChild(description);
     task_container.appendChild(checkbox);
     task_container.appendChild(title_container);
-    task_container.appendChild(delete_button);
     task_container.appendChild(edit_button);
+    task_container.appendChild(delete_button);
     title_container.appendChild(title);
     title_container.appendChild(expand_button);
     
