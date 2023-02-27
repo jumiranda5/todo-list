@@ -114,7 +114,7 @@ button {
     font-weight: bold;
 }
 
-/* HOME */
+/* TASK */
 
 .tasks {
     margin-top: 24px;
@@ -147,10 +147,11 @@ button {
 .expand-task { padding: 10px; }
 .task-button { padding: 12px; }
 
-.task-container button > img {
+.task-container button > svg {
     display: block;
     width: 100%;
     object-fit: contain;
+    fill: var(--color-main);
 }
 
 .task-title-container {

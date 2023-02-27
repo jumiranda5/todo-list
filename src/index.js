@@ -1,9 +1,6 @@
 // styles
 import './css/reset.css';
-import './page/style.css';
-
-// images
-import './img/delete.svg';
+import './css/style.css';
 
 // views
 import display_page from './page/page';
