@@ -5,6 +5,14 @@ class Project {
         this.color = color;
     }
 
+    get name() {
+        return this._name;
+    }
+
+    get color() {
+        return this._color;
+    }
+
     set name(value) {
         this._name = value;
     }
