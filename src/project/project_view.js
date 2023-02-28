@@ -17,6 +17,7 @@ const projectView = () => {
     // Progress
     const progressContainer = document.createElement('div');
     progressContainer.classList.add('progress-container');
+    progressContainer.style.width = "50%";
 
     const progressText = document.createElement('p');
     progressText.classList.add('progress-text');
@@ -24,7 +25,6 @@ const projectView = () => {
 
     const progress = document.createElement('div');
     progress.classList.add('progress');
-    progress.setAttribute("width", "50%");
 
     // html tree
     container.appendChild(title);
