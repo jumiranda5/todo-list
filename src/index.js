@@ -6,6 +6,7 @@ import './css/style.css';
 import display_page from './page/page';
 import home from './page/home';
 import all_projects from './page/projects';
+import add_task_form from './page/add';
 
 // Objects
 import Project from './project/project';
@@ -35,5 +36,8 @@ home(tasks);
 
 // display all projects
 all_projects(projects);
+
+// display form
+add_task_form();
 
 // display project
